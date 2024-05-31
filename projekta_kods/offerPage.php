@@ -34,9 +34,8 @@ if (isset($_GET['offerID'])) {
     $selectedDetailsID = $_GET['detailsID'];
     $selectedOfferDetails = $offer->getOfferDetailsByID($offersInfoID);
   } else {
-    // Если комплектация не выбрана, отображаем предложение по умолчанию
     $selectedDetailsID = null;
-    $selectedOfferDetails = $offer->getOfferDetails($offersInfoID); // По умолчанию
+    $selectedOfferDetails = $offer->getOfferDetails($offersInfoID); 
   }
 
 
@@ -45,7 +44,6 @@ if (isset($_GET['offerID'])) {
     $_SESSION['selectedDetailsID'] = $selectedDetailsID; 
     $selectedOfferDetails = $offer->getOfferDetailsByID($offersInfoID);
 } else {
-    // Если комплектация не выбрана, отображаем предложение по умолчанию
     $selectedDetailsID = $_SESSION['selectedDetailsID'] ?? null;
     $selectedOfferDetails = $offer->getOfferDetailsByID($offersInfoID);
 }
@@ -140,11 +138,11 @@ if (isset($_POST['submit_order'])) {
         <script>
           $(document).ready(function(){
               $('button[name="delete_configuration"]').click(function(e){
-                  e.preventDefault(); // Предотвращаем стандартное действие кнопки
+                  e.preventDefault();
 
-                  var form = $(this).closest('form'); // Получаем родительскую форму
-                  var detailsID = form.find('input[name="detailsID"]').val(); // Получаем ID деталей
-                  var offerID = form.find('input[name="offerID"]').val(); // Получаем ID предложения
+                  var form = $(this).closest('form'); 
+                  var detailsID = form.find('input[name="detailsID"]').val(); 
+                  var offerID = form.find('input[name="offerID"]').val();
 
                   var deleteConfirmationText = "Are you sure you want to delete this configuration?";
                   swal({

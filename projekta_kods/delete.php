@@ -1,7 +1,7 @@
 <?php
 
-session_start(); //Start the session.
-require_once 'connection.php'; //Require connection file to connect to database.
+session_start();
+require_once 'connection.php';
 $sql = "SELECT * FROM comments ORDER BY commentID DESC";
 
 if(isset($_GET['commentID'])) {

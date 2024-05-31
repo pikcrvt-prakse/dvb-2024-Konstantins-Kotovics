@@ -1,5 +1,5 @@
 <?php
-session_start(); //Start the session.
+session_start();
 require_once 'connection.php';
 
 ?>
@@ -10,7 +10,6 @@ require_once 'connection.php';
     <title>Sign Up</title>
     <link rel="stylesheet" href="css/reglog.css">
 
-    <!-- Подключение скриптов -->
     <script src="../autosalons/js/script.js" defer></script>
     <script src="../autosalons/js/registration.js" defer></script>
 
@@ -20,8 +19,6 @@ require_once 'connection.php';
 <?php
 require 'header.php';
 ?>
-
-<!-- REGISTRATION FORM -->
 
 <!-- REGISTRATION FORM -->
 

@@ -86,7 +86,6 @@ $currentMaxPrice = $_GET['maxPrice'] ?? '';
         </div>
 
         <div class="filters">
-            <!-- Контейнер для цены -->
             <div class="price-container">
                 <label for="minPrice"></label>
                 <input type="text" id="minPrice" name="minPrice" placeholder="0 €" value="<?php echo $currentMinPrice ?>" style="width: 70px;">
@@ -111,12 +110,10 @@ $currentMaxPrice = $_GET['maxPrice'] ?? '';
                 <label for="model"><strong>Model:</strong></label>
                 <select name="model" class="form-control" id="model" disabled>
                     <option value="">Select Brand First</option>
-                    <!-- Опции для моделей будут добавлены динамически с помощью JavaScript -->
                 </select>
             </div>
 
 <script>
-    // Ассоциативный массив с моделями для каждой марки автомобиля
     var modelsByBrand = <?php echo json_encode($modelsByBrand); ?>;
 
     document.getElementById('brand').addEventListener('change', function() {
@@ -125,10 +122,8 @@ $currentMaxPrice = $_GET['maxPrice'] ?? '';
     var modelGroup = document.getElementById('model-group');
 
     if (selectedBrand) {
-        // Очистить список моделей перед добавлением новых
         modelSelect.innerHTML = '<option value="">Select Brand First</option>';
         
-        // Отобразить список моделей для выбранной марки
         if (modelsByBrand[selectedBrand]) {
             modelsByBrand[selectedBrand].forEach(function(model) {
                 var option = document.createElement('option');
@@ -137,35 +132,26 @@ $currentMaxPrice = $_GET['maxPrice'] ?? '';
                 modelSelect.appendChild(option);
             });
         }
-        // Активировать поле для выбора модели
         modelSelect.disabled = false;
         
-        // Установить надпись в зависимости от состояния выбранной марки
         modelSelect.querySelector('option').textContent = 'All models';
 
-        // Сбросить выбранную модель на "Select Brand First"
         modelSelect.value = '';
     } else {
-        // Сделать поле недоступным для выбора, если марка не выбрана, и установить соответствующий текст
         modelSelect.disabled = true;
         modelSelect.innerHTML = '<option value="">Select Brand First</option>';
     }
 });
 
-
-
-    // Проверить, есть ли в URL-адресе параметр модели при загрузке страницы
     document.addEventListener('DOMContentLoaded', function() {
         var urlParams = new URLSearchParams(window.location.search);
         var selectedBrand = urlParams.get('brand');
         var selectedModel = urlParams.get('model');
         var modelSelect = document.getElementById('model');
 
-        // Очистить предыдущие опции моделей и установить начальный текст
         modelSelect.innerHTML = '<option value="">Select Brand First</option>';
 
         if (selectedBrand) {
-            // Отобразить список моделей для выбранной марки
             if (modelsByBrand[selectedBrand]) {
                 modelsByBrand[selectedBrand].forEach(function(model) {
                     var option = document.createElement('option');
@@ -174,19 +160,15 @@ $currentMaxPrice = $_GET['maxPrice'] ?? '';
                     modelSelect.appendChild(option);
                 });
             }
-            // Активировать поле для выбора модели и установить соответствующий текст
             modelSelect.disabled = false;
             modelSelect.querySelector('option').textContent = 'All models';
 
-            // Если модель была сохранена в URL-адресе и есть такая модель для выбранной марки, установить ее выбранным значением
             if (selectedModel && modelsByBrand[selectedBrand] && modelsByBrand[selectedBrand].includes(selectedModel)) {
                 modelSelect.value = selectedModel;
             } else {
-                // Если модель не была сохранена в URL-адресе, установить "Select Brand First"
                 modelSelect.value = '';
             }
         } else {
-            // Сделать поле недоступным для выбора, если марка не выбрана, и установить соответствующий текст
             modelSelect.disabled = true;
             modelSelect.querySelector('option').textContent = 'Select Brand First';
         }
@@ -199,9 +181,7 @@ $currentMaxPrice = $_GET['maxPrice'] ?? '';
                 <select name="year" class="form-control" id="year">
                     <option value="">All Years</option>
                     <?php 
-                    // Год начала
                     $startYear = 1990;
-                    // текущий год
                     $endYear = date("Y");
                     
                     for($year = $endYear; $year >= $startYear; $year--) { ?>

@@ -187,7 +187,6 @@ class Offer {
     
             $params = [];
     
-            // Добавляем значения для SET части запроса и их параметры в массивы, если они были переданы
             if (isset($type)) {
                 $setValues[] = 'offers.type = ?';
                 $params[] = $type;
@@ -269,25 +268,21 @@ class Offer {
     }    
 
     public function addConfiguration($detailsID, $offersInfoID, $color, $image, $color_price, $transmission_type, $transmission_price, $engine_type, $engine_price) {
-        // Вставка записи в таблицу car_colors
         $sql = "INSERT INTO car_colors (color, image, color_price) VALUES (?, ?, ?)";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute([$color, $image, $color_price]);
         $colorID = $this->conn->lastInsertId();
     
-        // Вставка записи в таблицу transmission
         $sql = "INSERT INTO transmission (transmission_type, transmission_price) VALUES (?, ?)";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute([$transmission_type, $transmission_price]);
         $transmissionID = $this->conn->lastInsertId();
     
-        // Вставка записи в таблицу engine
         $sql = "INSERT INTO engine (engine_type, engine_price) VALUES (?, ?)";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute([$engine_type, $engine_price]);
         $engineID = $this->conn->lastInsertId();
     
-        // Вставка записи в таблицу specific_details
         $sql = "INSERT INTO specific_details (offersInfoID, colorID, transmissionID, created_at, engineID) 
                 VALUES (?, ?, ?, NOW(), ?)";
         $stmt = $this->conn->prepare($sql);
@@ -342,7 +337,7 @@ class Offer {
             }
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
-            return false; // В случае ошибки возвращаем false
+            return false;
         }
     }
 

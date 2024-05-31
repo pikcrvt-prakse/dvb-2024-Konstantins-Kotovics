@@ -191,7 +191,7 @@ class UserMain {
         $stmt = $this->conn->prepare($sql);
         $stmt->execute([$this->userID]);
         $rulesAccepted = $stmt->fetchColumn();
-        return $rulesAccepted === 1; // Вернет true, если правила приняты
+        return $rulesAccepted === 1;
     }    
 
     public function acceptRules() {

@@ -1,6 +1,6 @@
 <?php
 
-session_start(); //Start the session.
+session_start(); 
 require_once 'connection.php';
 
   $name = $_POST['name'];
@@ -8,9 +8,7 @@ require_once 'connection.php';
   $comment = $_POST['comment'];
   $userID = $_SESSION['userID'];
 
-  // Create connection
   $conn = mysqli_connect($servername, $DBusername, $DBpassword, $dbname);
-  // Check connection
   if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
   }

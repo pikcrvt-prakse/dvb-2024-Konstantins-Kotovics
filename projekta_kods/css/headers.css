@@ -1,0 +1,40 @@
+/* Шапка */
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 0;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.form-control-dark {
+    border-color: var(--bs-gray);
+  }
+  .form-control-dark:focus {
+    border-color: #fff;
+    box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+  }
+  
+  .text-small {
+    font-size: 85%;
+  }
+  
+  .dropdown-toggle {
+    outline: 0;
+  }
+
+button.btn-link svg.bi {
+  color: #007bff;
+}
+
+button.btn-link:hover {
+  text-decoration: none;
+}
+
+.spacer {
+  margin-right: 20px;
+}

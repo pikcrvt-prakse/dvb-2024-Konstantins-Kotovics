@@ -26,7 +26,6 @@ if (!isset($_SESSION['userID']) || $_SESSION['roleID'] !== 1) {
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/editOffersPage.css">
 
-  <!-- alert close JS -->
   <script src="js/order-success-close.js" defer></script>
 
   <!-- For calendar-->

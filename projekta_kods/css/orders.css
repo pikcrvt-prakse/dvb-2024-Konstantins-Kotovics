@@ -1,0 +1,121 @@
+body {
+    background-size: cover;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.btn {
+    background-color: #428bca !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+table,
+th,
+td {
+    border: none;
+    padding: 10px;
+}
+
+.tab {
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.tab button:hover {
+    background-color: #3071a9;
+}
+
+.tabcontent {
+    display: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0px 0px 5px 5px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 80%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 12px;
+}
+
+th {
+    background-color: #428bca;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+.select1 {
+    width: 150px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f0f0f0;
+    color: #000;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select1 option {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.select1 option:checked {
+    background-color: #428bca;
+    color: #fff;
+}
+
+.select1 option:hover {
+    background-color: #ccc;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+#container {
+    margin-top: 1%;
+    text-align: center;
+    min-height: 1000px;
+}
+
+.order-divider {
+    margin-top: 5%;
+    border-bottom: 1px solid #7a7a7a;
+    margin-bottom: 0.5rem;
+    width: 60%;
+    float: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.order-divider2 {
+    margin-top: 1%;
+    border-bottom: 1px solid #7a7a7a;
+    width: 40%;
+    float: center;
+    margin-left: auto;
+    margin-right: auto;
+}
