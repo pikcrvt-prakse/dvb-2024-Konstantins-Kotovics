@@ -1,0 +1,12 @@
+# PROGRAMMATŪRAS PRODUKTA MODELĒŠANA UN PROJEKTĒŠANA
+## Sistēmas struktūras modelis
+### Sistēmas arhitektūra 
+
+Sistēmu (sk. 5. attēlu) veido trīš apakšsistēmas: apkalpojošo personālu modulis, lietotāja modulis, sistēmas modulis. Ar oranžu krāsu ir atzīmētas funkcijas, kuras tiks izmantotas kā piemēri 4.2.1. punktā datu plūsmu diagrammās.
+![DP4-1 Konstantīns Kotovičs FD diagramma](https://github.com/rvt-prog-kval-24/DP41-KonstantinsKotovics-TimeklaLietotneAutomasinuMeklesanaiUnPardosanaiTiessaiste/blob/main/documentation/atteli/5.%20att.%20FD%20diagramma.png)
+
+5. att. FD diagramma
+
+-   **Lietotāju modulis.** Nereģistrētam lietotājam būs iespēja veikt šādas funkcijas: apskatīt automašīnu klāstu, meklēt automašīnu pēc nosaukuma, izgatavotāja, minimālās un maksimālās cenas, izdošanas gada, krāsas, virsbūves tipa, transmisijas. Būs iespējams arī pierēğistrēties, ja viņš piereğistrēsies vai ieies kontā, tad tam parādīsies vairāk iespēju un viņš būs "klients" vai “apkalpojošs personāls” (atkarībā no tā, kādu paroli un lietotājvārdu ievadīs). Reģistrēts lietotājs varēs veikt šādas funkcijas: atstāt komentāru vai atbildēt uz citiem un dzēst to, aizpildīt formu, lai veiktu pasūtījumu, mainīt profila attēlu un paroli, apskatīt savus datus un informāciju par saviem pasūtījumiem, ka arī izvadīt excel tabulā, ir iespēja izvēlēties par kadām tēmām saņemt ziņojumus un kādus paslēpt, kā arī dzēst.
+-   **Apkolpojošo personālu modulis.** Apkalpojošajam personālam būs iespēja veikt šādas funkcijas: apskatīt visu automašīnu klāstu, mainīt profila attēlu, apstiprināt pasūtijumu un pasūtījuma izpildes procesā mainīt pasūtījuma izpildes statusu, dzēst pasūtijumu, apskatīt klienta informāciju, izvadīt tabulu ar klientu pasūtījumiem excel tabulā, atbildēt uz jautājumu vai dzēst to, pievienot vai rediģēt piedāvājumus un dzēst tos, pievienot vai dzēst komplektāciju, paslēpt piedāvājumu, lai lietotājam netiktu rādīti piedāvājumi, kas ir atzīmēti kā neaktīvi, ir iespēja izvēlēties par kadām tēmām saņemt ziņojumus.
+-   **Sistēmas modulis.** Platforma automātiski parādīs lietotāja izdarītās kļūdas, apkopos visus komentārus un atbildes atsevišķā sadaļā, nodrošinās informāciju lietotājam, kā arī attēlos lietotāja informāciju profila lapā un pasūtījumus Excel failā, izvadīs ziņojumus atsevišķajā logā, attēlos visus piedāvājumus un komplektācijas saistītas ar tiem, ka arī izvadīs pasūtījuma apstiprināšanas logu pēc kontaktinformācijas ievadīšanas.
