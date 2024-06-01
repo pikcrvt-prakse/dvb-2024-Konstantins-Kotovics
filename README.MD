@@ -162,9 +162,9 @@ Tehnikumā iegūtās zināšanas un prasmes bija pietiekamas, lai veiksmīgi izp
 
 ### 5. Izmantotie avoti
 
-Interum Technologies SIA (https://interum.lv): Informācija par uzņēmumu un tā darbības jomu.
-Google Maps (https://www.google.com/maps): Uzņēmuma atrašanās vietas noteikšana un apkārtnes izpēte.
-Diagrams.net (https://app.diagrams.net): Diagrammu un shēmu veidošana.
-Lucidchart (https://www.lucidchart.com/pages): Diagrammu un shēmu veidošana un vizualizācija.
-Wikipedia (https://www.wikipedia.org): Informācija par programmēšanas rīkiem un tehnoloģijām.
+1. Interum Technologies SIA (https://interum.lv): Informācija par uzņēmumu un tā darbības jomu.
+2. Google Maps (https://www.google.com/maps): Uzņēmuma atrašanās vietas noteikšana un apkārtnes izpēte.
+3. Diagrams.net (https://app.diagrams.net): Diagrammu un shēmu veidošana.
+4. Lucidchart (https://www.lucidchart.com/pages): Diagrammu un shēmu veidošana un vizualizācija.
+5. Wikipedia (https://www.wikipedia.org): Informācija par programmēšanas rīkiem un tehnoloģijām.
 
